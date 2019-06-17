@@ -1,0 +1,40 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptor: <http://udaptor.io/concept/Music/>
+PREFIX udaptorSpotify: <http://udaptor.io/services/Spotify/>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+insert data
+{
+    udaptorSpotify:playlist owl:equivalentClass udaptor:playlist .
+    udaptorSpotify:track owl:equivalentClass udaptor:track .
+    udaptorSpotify:artist owl:equivalentClass udaptor:artist .
+    udaptorSpotify:album owl:equivalentClass udaptor:album .
+    udaptorSpotify:stream owl:equivalentClass udaptor:stream .
+    udaptorSpotify:user owl:equivalentClass udaptor:user .
+
+
+    udaptorSpotify:createdBy owl:sameAs udaptor:createdBy .
+
+    udaptorSpotify:trackName owl:sameAs udaptor:trackName .    
+    udaptorSpotify:artistName owl:sameAs udaptor:artistName .
+    udaptorSpotify:endTime owl:sameAs udaptor:endTime .
+    udaptorSpotify:msPlayed owl:sameAs udaptor:msPlayed .
+    udaptorSpotify:none owl:sameAs udaptor:mediaDuration .
+
+
+    udaptorSpotify:playListDescription owl:sameAs udaptor:playListDescription .
+    udaptorSpotify:playListLastModifiedDate owl:sameAs udaptor:playListLastModifiedDate .
+    udaptorSpotify:playListName owl:sameAs udaptor:playListName .
+    udaptorSpotify:playListNumOfFollowers owl:sameAs udaptor:playListNumOfFollowers .
+    udaptorSpotify:playListTracks owl:sameAs udaptor:playListTracks .
+    udaptorSpotify:playListArtistName owl:sameAs udaptor:playListArtistName .
+    udaptorSpotify:playListTrackNote owl:sameAs udaptor:playListTrackNote .
+    udaptorSpotify:playListTrackName owl:sameAs udaptor:playListTrackName .
+
+
+   	udaptorSpotify:none owl:sameAs udaptor:none .
+
+
+}

@@ -1,0 +1,42 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptorSpotify: <http://udaptor.io/services/Spotify/>
+PREFIX owl:	<http://www.w3.org/2002/07/owl#>
+PREFIX udaptorSpotifyMD: <http://udaptor.io/metadata/Spotify/>
+
+insert data
+{
+	udaptorSpotifyMD:StreamingHistory_jsonöøartistName owl:sameAs udaptorSpotify:artistName .
+	udaptorSpotifyMD:StreamingHistory_jsonöøendTime owl:sameAs udaptorSpotify:endTime .
+	udaptorSpotifyMD:StreamingHistory_jsonöømsPlayed owl:sameAs udaptorSpotify:msPlayed .
+	udaptorSpotifyMD:StreamingHistory_jsonöøtrackName owl:sameAs udaptorSpotify:trackName .
+	udaptorSpotifyMD:none owl:sameAs udaptorSpotify:none .
+
+
+	#udaptorSpotifyMD:Userdata_jsonöøcountry owl:sameAs udaptorSpotify:user .
+	#udaptorSpotifyMD:Userdata_jsonöøusername owl:sameAs udaptorSpotify:user .
+
+	
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπødescription owl:sameAs udaptorSpotify:playListDescription .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπølastModifiedDate owl:sameAs udaptorSpotify:playListLastModifiedDate .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπøname owl:sameAs udaptorSpotify:playListName .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπønumberOfFollowers owl:sameAs udaptorSpotify:playListNumOfFollowers .
+	
+
+	#udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπ owl:sameAs udaptorSpotify:playListTracks .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπøartistName owl:sameAs udaptorSpotify:playListArtistName .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπønote owl:sameAs udaptorSpotify:playListTrackNote .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπøtrackName owl:sameAs udaptorSpotify:playListTrackName .
+
+
+
+
+	udaptorSpotifyMD:Follow_jsonöøfollowerCount owl:sameAs udaptorSpotify:followingUsersCount .
+	
+}
+
+
+
+
+
+

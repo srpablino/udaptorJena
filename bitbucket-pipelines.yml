@@ -1,0 +1,28 @@
+image: maven:3.6.1
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - apt-get update
+            - apt-get install -y zip
+            - mvn package -q # Build the jar
+            - cp target/udaptor-core-1.0-SNAPSHOT.jar application.jar
+            - zip source_bundle.zip application.jar Procfile
+          artifacts:
+            - source_bundle.zip
+      - step:
+          name: "Pushing jar to Production Env in Elasticbeanstalk"
+          deployment: production
+          script:
+          - pipe: atlassian/aws-elasticbeanstalk-deploy:0.3.0
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_REGION
+              APPLICATION_NAME: $APPLICATION_NAME
+              ZIP_FILE: source_bundle.zip
+              S3_BUCKET: $S3_BUCKET
+              VERSION_LABEL: "deploy-$BITBUCKET_BUILD_NUMBER-multiple"
+              ENVIRONMENT_NAME : $APPLICATION_ENV

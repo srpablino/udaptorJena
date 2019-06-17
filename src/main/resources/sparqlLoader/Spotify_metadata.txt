@@ -1,0 +1,82 @@
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:	<http://www.w3.org/2002/07/owl#>
+PREFIX udaptorSpotifyMD: <http://udaptor.io/metadata/Spotify/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+insert data
+{
+	udaptorSpotifyMD:StreamingHistory_jsonö rdfs:label "stream" .
+	udaptorSpotifyMD:StreamingHistory_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:StreamingHistory_jsonöøartistName .
+	udaptorSpotifyMD:StreamingHistory_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:StreamingHistory_jsonöøendTime .
+	udaptorSpotifyMD:StreamingHistory_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:StreamingHistory_jsonöømsPlayed .
+	udaptorSpotifyMD:StreamingHistory_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:StreamingHistory_jsonöøtrackName .
+	
+	udaptorSpotifyMD:StreamingHistory_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:none .
+		
+	udaptorSpotifyMD:Userdata_jsonö rdfs:label "stream" .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøcountry .
+
+
+
+	udaptorSpotifyMD:Follow_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Follow_jsonöøfollowerCount .
+	udaptorSpotifyMD:Follow_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Follow_jsonöøfollowingArtistsπ .
+	udaptorSpotifyMD:Follow_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Follow_jsonöøfollowingUsersCount .
+
+	
+
+
+	udaptorSpotifyMD:Playlist_jsonö rdfs:label "playlist" .
+	#udaptorSpotifyMD:Playlist_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπ .
+
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπ rdfs:label "playlist" .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπødescription .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπølastModifiedDate .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπøname .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπønumberOfFollowers .
+	#udaptorSpotifyMD:Playlist_jsonöø_playlistsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπ .
+
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπ rdfs:label "playlist" .
+
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπøartistName .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπønote .
+	udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:Playlist_jsonöø_playlistsπø_tracksπøtrackName .
+
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøbirthdate .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøcreatedFromFacebook .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøcreationTime .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøemail .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøfacebookUid .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøgender .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöømobileBrand .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöømobileNumber .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöømobileOperator .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøpostalCode .
+	udaptorSpotifyMD:Userdata_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Userdata_jsonöøusername .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøcountry .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöødate .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöømsDuration .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøplatform .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøselectedQuery .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøterminationReason .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøtypedQuery .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøuserIntent .
+	udaptorSpotifyMD:SearchQueries_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:SearchQueries_jsonöøviewUri .
+	udaptorSpotifyMD:YourLibrary_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_albumsπ .
+	udaptorSpotifyMD:YourLibrary_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_tracksπ .
+	udaptorSpotifyMD:YourLibrary_jsonöø_albumsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_albumsπøalbum .
+	udaptorSpotifyMD:YourLibrary_jsonöø_albumsπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_albumsπøartist .
+	udaptorSpotifyMD:YourLibrary_jsonöø_tracksπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_tracksπøalbum .
+	udaptorSpotifyMD:YourLibrary_jsonöø_tracksπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_tracksπøartist .
+	udaptorSpotifyMD:YourLibrary_jsonöø_tracksπ udaptorSpotifyMD:hasObject udaptorSpotifyMD:YourLibrary_jsonöø_tracksπøtrack .
+	udaptorSpotifyMD:FamilyPlan_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_address .
+	udaptorSpotifyMD:FamilyPlan_jsonöø_address udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_addressøcity .
+	udaptorSpotifyMD:FamilyPlan_jsonöø_address udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_addressøcountry .
+	udaptorSpotifyMD:FamilyPlan_jsonöø_address udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_addressøpostal_code .
+	udaptorSpotifyMD:FamilyPlan_jsonöø_address udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_addressøreal_name .
+	udaptorSpotifyMD:FamilyPlan_jsonöø_address udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_addressøstate .
+	udaptorSpotifyMD:FamilyPlan_jsonöø_address udaptorSpotifyMD:hasObject udaptorSpotifyMD:FamilyPlan_jsonöø_addressøstreet .
+	udaptorSpotifyMD:Payments_jsonö udaptorSpotifyMD:hasObject udaptorSpotifyMD:Payments_jsonöøpayment_method .
+}

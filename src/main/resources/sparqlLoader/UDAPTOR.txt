@@ -1,0 +1,116 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptor: <http://udaptor.io/concept/Music/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+insert data
+{
+
+    udaptor:track rdf:type rdfs:Class .
+    udaptor:playlist rdf:type rdfs:Class .
+    udaptor:album rdf:type rdfs:Class .
+    udaptor:artist rdf:type rdfs:Class .
+    udaptor:stream rdf:type rdfs:Class .
+    udaptor:user rdf:type rdfs:Class .
+
+
+    udaptor:isInAlbum rdf:type rdfs:Property .
+    udaptor:isInAlbum rdfs:domain udaptor:track .
+    udaptor:isInAlbum rdfs:range udaptor:album .
+
+    udaptor:createdBy rdf:type rdfs:Property .
+    udaptor:createdBy rdfs:domain udaptor:track .
+    udaptor:createdBy rdfs:range udaptor:artist .
+
+    #udaptor:hasSongInPlaylist rdf:type rdf:Property .
+
+    #########################################
+    # In each provider make relations from this properties, even if its to provider:none
+
+    udaptor:hasPlayList rdf:type rdf:Property .
+    udaptor:hasPlayList rdfs:domain udaptor:user.
+    udaptor:hasPlayList rdfs:range udaptor:playlist .
+
+    udaptor:streamed rdf:type rdf:Property .
+    udaptor:streamed rdfs:domain udaptor:user.
+    udaptor:streamed rdfs:range udaptor:stream .
+
+    udaptor:hasTrack rdf:type rdf:Property .
+    udaptor:hasTrack rdfs:domain udaptor:stream.
+    udaptor:hasTrack rdfs:domain udaptor:playlist.
+    udaptor:hasTrack rdfs:range udaptor:track .
+
+    udaptor:trackName rdf:type rdf:Property .
+    udaptor:trackName rdfs:domain udaptor:track.
+    udaptor:trackName rdfs:range xsd:string .
+    
+    udaptor:artistName rdf:type rdf:Property .
+    udaptor:artistName rdfs:domain udaptor:artist.
+    udaptor:artistName rdfs:range xsd:string .
+
+    udaptor:endTime rdf:type rdf:Property .
+    udaptor:endTime rdfs:domain udaptor:stream.
+    udaptor:endTime rdfs:range xsd:dateTime .
+
+    udaptor:msPlayed rdf:type rdf:Property .
+    udaptor:msPlayed rdfs:domain udaptor:stream.
+    udaptor:msPlayed rdfs:range xsd:int .
+
+    udaptor:mediaDuration rdf:type rdf:Property .
+    udaptor:mediaDuration rdfs:domain udaptor:track.
+    udaptor:mediaDuration rdfs:range xsd:int .
+
+    udaptor:playListDescription rdf:type rdf:Property .
+    udaptor:playListDescription rdfs:domain udaptor:playlist.
+    udaptor:playListDescription rdfs:range xsd:string .
+
+    udaptor:playListLastModifiedDate rdf:type rdf:Property .
+    udaptor:playListLastModifiedDate rdfs:domain udaptor:playlist.
+    udaptor:playListLastModifiedDate rdfs:range xsd:dateTime .
+
+    udaptor:playListName rdf:type rdf:Property .
+    udaptor:playListName rdfs:domain udaptor:playlist.
+    udaptor:playListName rdfs:range xsd:string .
+
+    udaptor:playListNumOfFollowers rdf:type rdf:Property .
+    udaptor:playListNumOfFollowers rdfs:domain udaptor:playlist.
+    udaptor:playListNumOfFollowers rdfs:range xsd:int .
+
+    udaptor:playListTracks rdf:type rdf:Property .
+    udaptor:playListTracks rdfs:domain udaptor:playlist.
+    udaptor:playListTracks rdfs:range xsd:string .
+
+    udaptor:playListArtistName rdf:type rdf:Property .
+    udaptor:playListArtistName rdfs:domain udaptor:playlist.
+    udaptor:playListArtistName rdfs:range xsd:string .
+
+    udaptor:playListTrackNote rdf:type rdf:Property .
+    udaptor:playListTrackNote rdfs:domain udaptor:playlist.
+    udaptor:playListTrackNote rdfs:range xsd:string .
+
+    udaptor:playListTrackName rdf:type rdf:Property .
+    udaptor:playListTrackName rdfs:domain udaptor:playlist.
+    udaptor:playListTrackName rdfs:range xsd:string .
+
+    #########################################
+
+    #udaptor:description rdf:type rdfs:Literal .
+    #udaptor:statistics rdf:type rdfs:Literal .
+
+    #_:b rdf:predicate udaptor:track .
+    #_:b rdf:subject udaptor:playlist .
+    #_:b rdf:predicate udaptor:hasSongInPlaylist .
+    #_:b rdfs:label udaptor:description .
+    #_:b rdfs:label udaptor:statistics .
+
+
+    #udaptor:track rdfs:label udaptor:description .
+    #udaptor:track rdfs:label udaptor:statistics .
+    #udaptor:playlist rdfs:label udaptor:description .
+    #udaptor:playlist rdfs:label udaptor:statistics .
+    #udaptor:album rdfs:label udaptor:description .
+    #udaptor:album rdfs:label udaptor:statistics .
+    #udaptor:artist rdfs:label udaptor:description .
+    #udaptor:artist rdfs:label udaptor:statistics .
+
+}

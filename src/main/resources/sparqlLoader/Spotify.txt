@@ -1,0 +1,72 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptorSpotify: <http://udaptor.io/services/Spotify/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+insert data
+{
+
+    udaptorSpotify:none rdf:type rdfs:Literal.
+
+    udaptorSpotify:user rdf:type rdfs:Class .
+    udaptorSpotify:query rdf:type rdfs:Class .
+    udaptorSpotify:playlist rdf:type rdfs:Class .
+    udaptorSpotify:track rdf:type rdfs:Class .
+    udaptorSpotify:artist rdf:type rdfs:Class .
+    udaptorSpotify:stream rdf:type rdfs:Class .
+
+    udaptorSpotify:searched rdf:type rdfs:Property .
+    udaptorSpotify:searched rdfs:domain udaptorSpotify:user .
+    udaptorSpotify:searched rdfs:range udaptorSpotify:query .
+
+    udaptorSpotify:hasPlaylist rdf:type rdfs:Property .
+    udaptorSpotify:hasPlaylist rdfs:domain udaptorSpotify:user .
+    udaptorSpotify:hasPlaylist rdfs:range udaptorSpotify:playlist .
+
+    udaptorSpotify:hasTrack rdf:type rdfs:Property .
+    udaptorSpotify:hasTrack rdfs:domain udaptorSpotify:playlist .
+    udaptorSpotify:hasTrack rdfs:range udaptorSpotify:track .
+
+    udaptorSpotify:createdBy rdf:type rdfs:Property .
+    udaptorSpotify:createdBy rdfs:domain udaptorSpotify:track .
+    udaptorSpotify:createdBy rdfs:range udaptorSpotify:artist .
+
+    udaptorSpotify:hasInLibrary rdf:type rdfs:Property .
+    udaptorSpotify:hasInLibrary rdfs:domain udaptorSpotify:user .
+    udaptorSpotify:hasInLibrary rdfs:range udaptorSpotify:track .
+
+    udaptorSpotify:follows rdf:type rdfs:Property .
+    udaptorSpotify:follows rdfs:domain udaptorSpotify:user .
+    udaptorSpotify:follows rdfs:range udaptorSpotify:artist .
+
+    udaptorSpotify:streamed rdf:type rdfs:Property .
+
+
+    
+    udaptorSpotify:playListDescription rdf:type rdfs:Property .
+    udaptorSpotify:playListLastModifiedDate rdf:type rdfs:Property .
+    udaptorSpotify:playListName rdf:type rdfs:Property .
+    udaptorSpotify:playListNumOfFollowers rdf:type rdfs:Property .
+    udaptorSpotify:playListTracks rdf:type rdfs:Property .
+    udaptorSpotify:playListArtistName rdf:type rdfs:Property .
+    udaptorSpotify:playListTrackNote rdf:type rdfs:Property .
+    udaptorSpotify:playListTrackName rdf:type rdfs:Property .
+
+
+    #udaptorSpotify:album rdf:type rdfs:Literal .
+    #udaptorSpotify:note rdf:type rdfs:Literal .
+
+
+    #_:b rdf:object udaptorSpotify:user .
+    #_:b rdf:subject udaptorSpotify:track .
+    #_:b rdf:predicate udaptorSpotify:streamed .
+    #_:b rdfs:label udaptorSpotify:endTime .
+    #_:b rdfs:label udaptorSpotify:msPlayed .
+
+    #udaptorSpotify:user rdfs:label udaptorSpotify:description .
+    #udaptorSpotify:query rdfs:label udaptorSpotify:description .
+    #udaptorSpotify:track rdfs:label udaptorSpotify:name .
+    #udaptorSpotify:track rdfs:label udaptorSpotify:album .
+    #udaptorSpotify:track rdfs:label udaptorSpotify:note .
+
+}

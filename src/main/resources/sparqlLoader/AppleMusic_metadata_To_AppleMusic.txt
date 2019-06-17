@@ -1,0 +1,73 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptorApple: <http://udaptor.io/services/AppleMusic/>
+PREFIX owl:	<http://www.w3.org/2002/07/owl#>
+PREFIX udaptorAppleMD: <http://udaptor.io/metadata/AppleMusic/>
+
+insert data
+{
+
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøContentName owl:sameAs udaptorApple:ContentName .
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøArtistName owl:sameAs udaptorApple:ArtistName .
+    udaptorAppleMD:AppleMusicPlayActivity_csvöøEventEndTimestamp owl:sameAs udaptorApple:EventEndTimestamp .
+    udaptorAppleMD:AppleMusicPlayActivity_csvöøMillisecondsSincePlay owl:sameAs udaptorApple:MillisecondsSincePlay .
+    udaptorAppleMD:AppleMusicPlayActivity_csvöøMediaDurationInMilliseconds owl:sameAs udaptorApple:MediaDurationInMilliseconds .   
+    
+    #udaptorAppleMD:AppleMusicPlayActivity_csvöøStoreCountryName owl:sameAs udaptorApple:StoreCountryName .       
+
+    #None objects 
+
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøAppleIdNumber owl:sameAs udaptorApple:AppleIdNumber .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøAppleMusicSubscription owl:sameAs udaptorApple:AppleMusicSubscription .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøBuildVersion owl:sameAs udaptorApple:BuildVersion .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøClientIpAddress owl:sameAs udaptorApple:ClientIpAddress .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøContentProvider owl:sameAs udaptorApple:ContentProvider .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøContentSpecificType owl:sameAs udaptorApple:ContentSpecificType .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøDeviceIdentifier owl:sameAs udaptorApple:DeviceIdentifier .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøEndPositionInMilliseconds owl:sameAs udaptorApple:EndPositionInMilliseconds .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøEndReasonType owl:sameAs udaptorApple:EndReasonType .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøEventReasonHintType owl:sameAs udaptorApple:EventReasonHintType .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøEventReceivedTimestamp owl:sameAs udaptorApple:EventReceivedTimestamp .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøEventStartTimestamp owl:sameAs udaptorApple:EventStartTimestamp .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøFeatureName owl:sameAs udaptorApple:FeatureName .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøGenre owl:sameAs udaptorApple:Genre .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøItemType owl:sameAs udaptorApple:ItemType .           
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøMediaType owl:sameAs udaptorApple:MediaType .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøMetricsBucketId owl:sameAs udaptorApple:MetricsBucketId .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøMetricsClientId owl:sameAs udaptorApple:MetricsClientId .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøOffline owl:sameAs udaptorApple:Offline .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøOriginalTitle owl:sameAs udaptorApple:OriginalTitle .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøPlayDurationMilliseconds owl:sameAs udaptorApple:PlayDurationMilliseconds .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøSourceType owl:sameAs udaptorApple:SourceType .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøStartPositionInMilliseconds owl:sameAs udaptorApple:StartPositionInMilliseconds .       
+	udaptorAppleMD:AppleMusicPlayActivity_csvöøUtcOffsetInSeconds owl:sameAs udaptorApple:UtcOffsetInSeconds .  
+
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøAdded_Date owl:sameAs udaptorApple:Added_Date .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøAvailable_On_Apple_Music_Profile owl:sameAs udaptorApple:Available_On_Apple_Music_Profile .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøContainer_Identifier owl:sameAs udaptorApple:Container_Identifier .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøContainer_Type owl:sameAs udaptorApple:Container_Type .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøDescription owl:sameAs udaptorApple:Description .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøName_or_Description_Modified_Date owl:sameAs udaptorApple:Name_or_Description_Modified_Date .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPlaylist_Is_Shared owl:sameAs udaptorApple:Playlist_Is_Shared .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPlaylist_Item_Identifiersπ owl:sameAs udaptorApple:Playlist_Item_Identifiersπ .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPlaylist_Items_Modified_Date owl:sameAs udaptorApple:Playlist_Items_Modified_Date .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPlaylist_Like_Rating owl:sameAs udaptorApple:Playlist_Like_Rating .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPlaylist_Previously_Shared owl:sameAs udaptorApple:Playlist_Previously_Shared .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPublic_Playlist_Identifier owl:sameAs udaptorApple:Public_Playlist_Identifier .
+	udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøTitle owl:sameAs udaptorApple:Title .
+
+}
+
+
+
+#udaptorAppleMD:AppleMusicLibraryActivity_jsonöø_User owl:sameAs udaptorApple:user .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøAdded owl:sameAs udaptorApple:addedDate .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøContainer owl:sameAs udaptorApple:container .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøDescription owl:sameAs udaptorApple:description .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøName owl:sameAs udaptorApple:name .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPlaylist owl:sameAs udaptorApple:playlist .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøPublic owl:sameAs udaptorApple:type .
+#udaptorAppleMD:AppleMusicLibraryPlaylists_jsonöøTitle owl:sameAs udaptorApple:title .
+#udaptorAppleMD:AppleMusicLibraryTracks_jsonöøAlbum owl:sameAs udaptorApple: .
+
+

@@ -1,0 +1,74 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptor: <http://udaptor.io/concept/Music/>
+PREFIX udaptorApple: <http://udaptor.io/services/AppleMusic/>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+insert data
+{
+
+    udaptorApple:playlist owl:equivalentClass udaptor:playlist .
+    udaptorApple:track owl:equivalentClass udaptor:track .
+    udaptorApple:artist owl:equivalentClass udaptor:artist .
+    udaptorApple:album owl:equivalentClass udaptor:album .
+    udaptorApple:playActivity owl:equivalentClass udaptor:stream .
+    udaptorApple:userApple owl:equivalentClass udaptor:user .
+
+
+
+
+    udaptorApple:isInAlbum owl:sameAs udaptor:isInAlbum .
+    udaptorApple:createdBy owl:sameAs udaptor:createdBy .
+ 
+    udaptorApple:ContentName owl:sameAs udaptor:trackName .
+    udaptorApple:ArtistName owl:sameAs udaptor:artistName .
+    udaptorApple:EventEndTimestamp owl:sameAs udaptor:endTime .
+    udaptorApple:PlayDurationMilliseconds owl:sameAs udaptor:msPlayed.
+    udaptorApple:MediaDurationInMilliseconds owl:sameAs udaptor:mediaDuration.
+    
+
+    udaptorApple:StoreCountryName owl:sameAs udaptor:none.
+
+    #None objects 
+    udaptorApple:MillisecondsSincePlay owl:sameAs udaptor:none .
+
+    udaptorApple:AppleIdNumber owl:sameAs udaptor:none.
+    udaptorApple:AppleMusicSubscription owl:sameAs udaptor:none.
+    udaptorApple:BuildVersion owl:sameAs udaptor:none.
+    udaptorApple:ClientIpAddress owl:sameAs udaptor:none.
+    udaptorApple:ContentProvider owl:sameAs udaptor:none.
+    udaptorApple:ContentSpecificType owl:sameAs udaptor:none.
+    udaptorApple:DeviceIdentifier owl:sameAs udaptor:none.
+    udaptorApple:EndPositionInMilliseconds owl:sameAs udaptor:none.
+    udaptorApple:EndReasonType owl:sameAs udaptor:none.
+    udaptorApple:EventReasonHintType owl:sameAs udaptor:none.
+    udaptorApple:EventReceivedTimestamp owl:sameAs udaptor:none.
+    udaptorApple:EventStartTimestamp owl:sameAs udaptor:none.
+    udaptorApple:FeatureName owl:sameAs udaptor:none.
+    udaptorApple:Genre owl:sameAs udaptor:none.
+    udaptorApple:ItemType owl:sameAs udaptor:none.
+    udaptorApple:MediaType owl:sameAs udaptor:none.
+    udaptorApple:MetricsBucketId owl:sameAs udaptor:none.
+    udaptorApple:MetricsClientId owl:sameAs udaptor:none.
+    udaptorApple:Offline owl:sameAs udaptor:none.
+    udaptorApple:OriginalTitle owl:sameAs udaptor:none.
+    udaptorApple:SourceType owl:sameAs udaptor:none.
+    udaptorApple:StartPositionInMilliseconds owl:sameAs udaptor:none.
+    udaptorApple:UtcOffsetInSeconds owl:sameAs udaptor:none.
+
+    udaptorApple:Added_Date owl:sameAs udaptor:none.
+    udaptorApple:Available_On_Apple_Music_Profile owl:sameAs udaptor:none.
+    udaptorApple:Container_Identifier owl:sameAs udaptor:none.
+    udaptorApple:Container_Type owl:sameAs udaptor:playlist.
+    udaptorApple:Description owl:sameAs udaptor:playListDescription.
+    udaptorApple:Name_or_Description_Modified_Date owl:sameAs udaptor:playListLastModifiedDate.
+    udaptorApple:Playlist_Is_Shared owl:sameAs udaptor:none.
+    udaptorApple:Playlist_Item_Identifiersπ owl:sameAs udaptor:none.
+    udaptorApple:Playlist_Items_Modified_Date owl:sameAs udaptor:none.
+    udaptorApple:Playlist_Like_Rating owl:sameAs udaptor:none.
+    udaptorApple:Playlist_Previously_Shared owl:sameAs udaptor:none.
+    udaptorApple:Public_Playlist_Identifier owl:sameAs udaptor:none.
+    udaptorApple:Title owl:sameAs udaptor:playListName.
+    
+
+
+}

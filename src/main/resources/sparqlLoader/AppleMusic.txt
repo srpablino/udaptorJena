@@ -1,0 +1,107 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX udaptorApple: <http://udaptor.io/services/AppleMusic/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+insert data
+{
+
+    udaptorApple:none rdf:type rdfs:Literal.
+
+    udaptorApple:userApple rdf:type rdfs:Class .
+    udaptorApple:container rdf:type rdfs:Class .
+    udaptorApple:track rdf:type rdfs:Class .
+    udaptorApple:playlist rdf:type rdfs:Class .
+    udaptorApple:artist rdf:type rdfs:Class .
+    udaptorApple:album rdf:type rdfs:Class .
+    udaptorApple:playlist rdfs:subClassOf udaptorApple:container .
+    udaptorApple:album rdfs:subClassOf udaptorApple:container .
+    udaptorApple:playActivity rdf:type rdfs:Class .
+
+
+    udaptorApple:createdBy rdf:type rdf:Property .
+    udaptorApple:createdBy rdfs:domain udaptorApple:track .
+    udaptorApple:createdBy rdfs:range udaptorApple:artist .
+
+    udaptorApple:isInAlbum rdf:type rdf:Property .
+    udaptorApple:isInAlbum rdfs:domain udaptorApple:track .
+    udaptorApple:isInAlbum rdfs:range udaptorApple:album .
+
+    udaptorApple:hasSongInPlaylist rdf:type rdf:Property .
+    udaptorApple:hasSongInPlaylist rdfs:domain udaptorApple:track .
+    udaptorApple:hasSongInPlaylist rdfs:range udaptorApple:playlist .
+
+    udaptorApple:recentlyListenedTo rdf:type rdf:Property .
+
+
+    ## TODO: Define classes for streams in all TBOXes
+
+    udaptorApple:ContentName rdf:type rdf:Property .
+    udaptorApple:ArtistName rdf:type rdf:Property .
+    udaptorApple:EventEndTimestamp rdf:type rdf:Property .
+    udaptorApple:MillisecondsSincePlay rdf:type rdf:Property .
+    udaptorApple:PlayDurationMilliseconds rdf:type rdf:Property .
+
+
+    udaptorApple:AppleIdNumber rdf:type rdf:Property .
+    udaptorApple:AppleMusicSubscription rdf:type rdf:Property .
+    udaptorApple:BuildVersion rdf:type rdf:Property .
+    udaptorApple:ClientIpAddress rdf:type rdf:Property .
+    udaptorApple:ContentProvider rdf:type rdf:Property .
+    udaptorApple:ContentSpecificType rdf:type rdf:Property .
+    udaptorApple:DeviceIdentifier rdf:type rdf:Property .
+    udaptorApple:EndPositionInMilliseconds rdf:type rdf:Property .
+    udaptorApple:EndReasonType rdf:type rdf:Property .
+    udaptorApple:EventReasonHintType rdf:type rdf:Property .
+    udaptorApple:EventReceivedTimestamp rdf:type rdf:Property .
+    udaptorApple:EventStartTimestamp rdf:type rdf:Property .
+    udaptorApple:FeatureName rdf:type rdf:Property .
+    udaptorApple:Genre rdf:type rdf:Property .
+    udaptorApple:ItemType rdf:type rdf:Property .
+    udaptorApple:MediaType rdf:type rdf:Property .
+    udaptorApple:MetricsBucketId rdf:type rdf:Property .
+    udaptorApple:MetricsClientId rdf:type rdf:Property .
+    udaptorApple:Offline rdf:type rdf:Property .
+    udaptorApple:OriginalTitle rdf:type rdf:Property .
+    udaptorApple:SourceType rdf:type rdf:Property .
+    udaptorApple:StartPositionInMilliseconds rdf:type rdf:Property .
+    udaptorApple:UtcOffsetInSeconds rdf:type rdf:Property .
+    udaptorApple:MediaDurationInMilliseconds rdf:type rdf:Property .
+
+    udaptorApple:Added_Date rdf:type rdf:Property .
+    udaptorApple:Available_On_Apple_Music_Profile rdf:type rdf:Property .
+    udaptorApple:Container_Identifier rdf:type rdf:Property .
+    udaptorApple:Container_Type rdf:type rdf:Property .
+    udaptorApple:Description rdf:type rdf:Property .
+    udaptorApple:Name_or_Description_Modified_Date rdf:type rdf:Property .
+    udaptorApple:Playlist_Is_Shared rdf:type rdf:Property .
+    udaptorApple:Playlist_Item_Identifiersπ rdf:type rdf:Property .
+    udaptorApple:Playlist_Items_Modified_Date rdf:type rdf:Property .
+    udaptorApple:Playlist_Like_Rating rdf:type rdf:Property .
+    udaptorApple:Playlist_Previously_Shared rdf:type rdf:Property .
+    udaptorApple:Public_Playlist_Identifier rdf:type rdf:Property .
+    udaptorApple:Title rdf:type rdf:Property .
+
+
+    #udaptorApple:description rdf:type rdfs:Literal .
+    #udaptorApple:title rdf:type rdfs:Literal .
+    #udaptorApple:type rdf:type rdfs:Literal .
+    #udaptorApple:identifier rdf:type rdfs:Literal .
+    #udaptorApple:addedDate rdf:type rdfs:Literal .
+    #udaptorApple:other rdf:type rdfs:Literal .
+
+    #_:b rdf:object udaptorApple:user .
+    #_:b rdf:subject udaptorApple:container .
+    #_:b rdf:subject udaptorApple:track .
+    #_:b rdf:predicate udaptorApple:recentlyListenedTo .
+    #_:b rdfs:label udaptorApple:description .
+
+    #udaptorApple:user rdfs:label udaptorApple:description .
+    #udaptorApple:track rdfs:label udaptorApple:description .
+    #udaptorApple:playlist rdfs:label udaptorApple:title .
+    #udaptorApple:playlist rdfs:label udaptorApple:type .
+    #udaptorApple:playlist rdfs:label udaptorApple:identifier .
+    #udaptorApple:playlist rdfs:label udaptorApple:addedDate .
+    #udaptorApple:playlist rdfs:label udaptorApple:other .
+
+}

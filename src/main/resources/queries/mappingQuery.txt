@@ -1,0 +1,37 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+
+SELECT ?sourceObject ?targetObject where
+{
+    #From the parameter source-file get the tag
+    #metadataSource:AppleMusicPlayActivity_csvö rdfs:label ?sourceTag .
+    ?fileName rdfs:label ?sourceTag .
+
+    # TO GET ALL THE PROPERTIES FROM SOURCE TO TARGET
+    #metadataSource:AppleMusicPlayActivity_csvö metadataSource:hasObject ?object .
+    ?fileName metadataSource:hasObject ?sourceObject .
+    ?sourceObject owl:sameAs ?sourceMap .
+
+    # TO GET ONE SPECIFIC SOURCE
+    #From the parameter-object get the link to its provider
+    #metadataSource:AppleMusicPlayActivity_csvöøContentName owl:sameAs ?sourceMap .
+
+    #From the source-object link to the object in udaptor's domain graph
+    ?sourceMap owl:sameAs ?genMap .
+    ?targetMap owl:sameAs ?genMap .
+
+    #Find the equivalent object in the target provider
+    ?targetObject owl:sameAs ?targetMap .
+
+    #Find the file where we must store the object
+    ?targetFileName metadataTarget:hasObject ?targetObject .
+
+    #From the possible target files get the one with the same tag from the source
+    ?targetFileName rdfs:label ?sourceTag .
+
+    #Since we are using the same metadata, we have to remove duplicates
+    filter (?sourceMap != ?targetMap)
+
+    #Your service should return ?targetFileName and ?targetObject
+}
